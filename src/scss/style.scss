@@ -1,0 +1,60 @@
+@import 'font';
+@import 'null';
+
+html,
+body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: Circe;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	background-color: #E4E4E4;
+}
+
+.payKeeper__container {
+	margin: 0 auto;
+	padding: 80px 0;
+	max-width: 607px;
+}
+
+.payKeeper__form {
+	position: relative;
+	width: 100%;
+	padding: 55px 39px 39px;
+	border: 1px solid #E7E7E7;
+	border-radius: 16px;
+	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	background: #FFF;
+}
+
+.payKeeper-close-btn {
+	position: absolute;
+	top: 27px;
+	right: 27px;
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.payKeeper__form-header {
+	display: flex;
+	align-items: center;
+}
+
+.payKeeper-title {
+	font-size: 21px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	color: #000;
+	margin-left: 16px;
+}
