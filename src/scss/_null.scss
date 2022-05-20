@@ -36,7 +36,6 @@ body {
 }
 
 body {
-	font-family: 'Circe', sans-serif;
 	text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
@@ -47,7 +46,7 @@ body {
 input,
 button,
 textarea {
-	font-family: 'Circe';
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 input::-ms-clear {

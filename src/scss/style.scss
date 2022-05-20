@@ -1,4 +1,3 @@
-@import 'font';
 @import 'null';
 
 html,
@@ -9,7 +8,7 @@ body {
 }
 
 body {
-	font-family: Circe;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .wrapper {
@@ -23,16 +22,28 @@ body {
 	margin: 0 auto;
 	padding: 80px 0;
 	max-width: 607px;
+
+	@media (max-width: 607px) {
+		padding: 0 0 40px;
+	}
 }
 
 .payKeeper__form {
 	position: relative;
 	width: 100%;
 	padding: 55px 39px 39px;
+	margin-bottom: 80px;
 	border: 1px solid #E7E7E7;
 	border-radius: 16px;
 	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 	background: #FFF;
+
+	@media (max-width: 607px) {
+		border: none;
+		padding: 55px 32px 39px;
+		border-radius: 0;
+		margin-bottom: 41px;
+	}
 }
 
 .payKeeper-close-btn {
@@ -44,11 +55,35 @@ body {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+
+
+	@media (hover: hover) {
+		&:hover svg circle {
+			fill: #dadada;
+			transition: all 0.2s;
+		}
+	}
+
+	&:active svg circle {
+		fill: #dadada;
+		transition: all 0.2s;
+	}
+
+	@media (max-width: 607px) {
+		position: fixed;
+		top: 11px;
+		right: 16px;
+	}
 }
 
 .payKeeper__form-header {
 	display: flex;
 	align-items: center;
+	margin-bottom: 54px;
+
+	@media (max-width: 607px) {
+		margin-bottom: 46px;
+	}
 }
 
 .payKeeper-title {
@@ -57,4 +92,454 @@ body {
 	letter-spacing: 0.5px;
 	color: #000;
 	margin-left: 16px;
+}
+
+.payKeeper-card-number {
+	margin-bottom: 31px;
+
+	@media (max-width: 607px) {
+		margin-bottom: 30px;
+	}
+}
+
+.payKeeper-card-number-field {
+	margin-top: 30px;
+
+	@media (max-width: 607px) {
+		margin-top: 22px;
+	}
+}
+
+.payKeeper-caption {
+	font-size: 17px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	color: #1D243F;
+	margin-bottom: 7px;
+}
+
+.payKeeper-text {
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: #9397A7;
+
+	@media (max-width: 607px) {
+		margin-bottom: 22px;
+	}
+}
+
+.payKeeper-card {
+	width: 100%;
+	height: 56px;
+	padding-left: 20px;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	border: 1px solid #E0E0E0;
+	border-radius: 8px;
+	color: #151B3C;
+	background-color: #FAFAFA;
+	font-family: 'IBM Plex Sans', sans-serif;
+
+	&::placeholder {
+		color: #9E9E9E;
+		font-family: 'IBM Plex Sans', sans-serif;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			border: 1px solid #BDBDBD;
+		}
+	}
+
+	&:active {
+		border: 1px solid #BDBDBD;
+	}
+
+	&:focus {
+		border: 2px solid #97C1E8;
+		padding-left: 19px;
+		caret-color: #47535E;
+	}
+
+	&.--incorrect-card {
+		border: 2px solid #DF8282;
+		padding-left: 19px;
+	}
+}
+
+.payKeeper-card_data {
+	text-align: center;
+	padding-left: 0;
+	width: 215px;
+
+	&:focus-within {
+		padding-left: 0;
+	}
+}
+
+.payKeeper-exp {
+	margin-bottom: 32px;
+
+	@media (max-width: 607px) {
+		margin-bottom: 30px;
+	}
+}
+
+.payKeeper-cvv {
+	margin-bottom: 37px;
+
+	@media (max-width: 607px) {
+		margin-bottom: 30px;
+	}
+}
+
+.payKeeper__inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.payKeeper__inner-form {
+	display: flex;
+	align-items: center;
+	width: 215px;
+}
+
+.payKeeper-slash {
+	font-size: 17px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	color: #9397A7;
+	margin: 0 12px;
+}
+
+.payKeeper-card-exp {
+	flex: 0 1 92px;
+	width: 100%;
+}
+
+.payKeeper-card-holder {
+	margin-bottom: 64px;
+}
+
+.payKeeper__info {
+	margin-bottom: 30px;
+}
+
+.payKeeper__info-item {
+	margin-bottom: 26px;
+}
+
+.payKeeper__info-item-top {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.payKeeper__info-item-title {
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	margin-left: 7px;
+	color: #9397A7;
+}
+
+.payKeeper__info-item-text {
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 17px;
+	letter-spacing: 0.5px;
+	margin-left: 32px;
+	color: #1D243F;
+}
+
+.payKeeper-divider {
+	overflow: hidden;
+	height: 2px;
+	margin-bottom: 31px;
+
+	& img {
+		max-width: 527px;
+	}
+}
+
+.payKeeper__amount {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 64px;
+}
+
+.payKeeper__amount-text {
+	font-size: 27px;
+	text-transform: uppercase;
+	font-weight: 500;
+	line-height: 27px;
+	letter-spacing: 0.5px;
+	color: #000;
+}
+
+.payKeeper-pay-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 56px;
+	width: 100%;
+	font-size: 17px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	color: #fff;
+	border-radius: 8px;
+	background-color: #025EFE;
+	transition: all 0.2s;
+
+	@media (hover: hover) {
+		&:hover {
+			background-color: #0146BF;
+		}
+	}
+
+	&:active {
+		background-color: #0146BF;
+	}
+}
+
+.payKeeper__footer {
+	text-align: center;
+
+	@media (max-width: 607px) {
+		text-align: left;
+		padding: 0 32px;
+	}
+}
+
+.payKeeper__footer-text {
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin-bottom: 20px;
+	color: #9397A7;
+}
+
+.payKeeper__footer-text-link {
+	position: relative;
+	color: #4c81dd;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 16px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: #4c81dd;
+
+		@media (max-width: 351px) {
+			width: 114%;
+			left: -4px;
+		}
+	}
+
+	&:nth-child(2):after {
+		width: 114%;
+		left: -4px;
+
+		@media (max-width: 493px) {
+			width: 106%;
+		}
+
+		@media (max-width: 412px) {
+			left: 0;
+		}
+	}
+
+	@media (max-width: 351px) {
+		white-space: nowrap;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			color: #266ae0;
+		}
+	}
+
+	&:active {
+		color: #266ae0;
+	}
+
+	&.--trawte {
+		white-space: nowrap;
+	}
+}
+
+.payKeeper-cards-logo {
+	display: flex;
+	justify-content: space-between;
+	max-width: 340px;
+	margin: 40px auto 0;
+
+	@media (max-width: 428px) {
+		justify-content: center;
+	}
+}
+
+.payKeeper-cards-logo-item {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 70px;
+	height: 48px;
+	border: 1px solid #D9D9D9;
+	border-radius: 6px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	background: #F5F5F5;
+
+	&.--mir {
+		@media (max-width: 428px) {
+			display: none;
+		}
+	}
+
+	@media (max-width: 428px) {
+		margin-left: 20px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.payKeeper-incorrect-card {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 14px;
+	letter-spacing: 0.5px;
+	color: #DF8282;
+	margin-top: 16px;
+}
+
+.payKeeper-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0 16px;
+	background: rgba(0, 0, 0, 0.32);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+
+.payKeeper__modal {
+	padding: 31px;
+	max-width: 456px;
+	width: 100%;
+	border: 1px solid #E7E7E7;
+	border-radius: 16px;
+	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	background: #FFF;
+
+	@media (max-width: 428px) {
+		padding: 23px;
+	}
+}
+
+.payKeeper__modal-title {
+	font-weight: 500;
+	font-size: 21px;
+	line-height: 27px;
+	letter-spacing: 0.5px;
+	margin-bottom: 24px;
+	color: #1D243F;
+}
+
+.payKeeper__modal-text {
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0.5px;
+	max-width: 380px;
+	color: #9397A7;
+
+	@media (max-width: 428px) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+.payKeeper__modal-footer {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 24px;
+
+	@media (max-width: 428px) {
+		margin-top: 32px;
+		justify-content: center;
+	}
+}
+
+.payKeeper__modal-stay-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 121px;
+	font-size: 16px;
+	font-weight: 500;
+	height: 48px;
+	letter-spacing: .5px;
+	border: 1px solid #E0E0E0;
+	border-radius: 8px;
+	color: #9397A7;
+	background-color: transparent;
+	transition: all .2s;
+
+	@media (hover: hover) {
+		&:hover {
+			background-color: #FAFAFA;
+			border: 1px solid #757575;
+		}
+	}
+
+	&:active {
+		background-color: #FAFAFA;
+		border: 1px solid #757575;
+	}
+
+	@media (max-width: 428px) {
+		max-width: 144px;
+		width: 100%;
+	}
+}
+
+.payKeeper__modal-cancel-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 125px;
+	font-size: 16px;
+	font-weight: 500;
+	height: 48px;
+	letter-spacing: .5px;
+	border-radius: 8px;
+	color: #fff;
+	background-color: #025EFE;
+	transition: all .2s;
+	margin-left: 8px;
+
+	@media (hover: hover) {
+		&:hover {
+			background-color: #0146BF;
+		}
+	}
+
+	&:active {
+		background-color: #0146BF;
+	}
+
+	@media (max-width: 428px) {
+		max-width: 144px;
+		width: 100%;
+	}
 }

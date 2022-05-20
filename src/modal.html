@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>payKeeper</title>
+	<title>Modal</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,9 +25,8 @@
 					<h2 class="payKeeper-caption">Номер карты</h2>
 					<p class="payKeeper-text">Введите номер карты (от 12 до 19 цифр)</p>
 					<div class="payKeeper-card-number-field">
-						<!-- <input class="payKeeper-card" id="payKeeperCard" type="number" required maxlength="19"
-							oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="0000  0000  0000  0000"> -->
-						<input class="payKeeper-card" id="payKeeperCard" type="text" required maxlength="19" placeholder="0000  0000  0000  0000">
+						<input class="payKeeper-card" type="number" required maxlength="19" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+							placeholder="0000  0000  0000  0000">
 					</div>
 				</div>
 				<div class="payKeeper__inner payKeeper-exp">
@@ -125,10 +124,19 @@
 			</div>
 
 		</div>
+		<div class="payKeeper-overlay">
+			<div class="payKeeper__modal">
+				<div class="payKeeper__modal-title">Прервать оплату</div>
+				<p class="payKeeper__modal-text">Вы точно хотите прервать процесс оплаты? Все выбранные ранее услуги, останутся неоплаченными.</p>
+				<div class="payKeeper__modal-footer">
+					<button class="payKeeper__modal-stay-btn">Остаться</button>
+					<button class="payKeeper__modal-cancel-btn">Прервать</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
 	<script src="js/main.js"></script>
 </body>
 
